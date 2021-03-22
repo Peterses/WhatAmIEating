@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6587E6C526091D6B008CD221 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587E6C426091D6B008CD221 /* MainView.swift */; };
+		6587E6C826096553008CD221 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6587E6C726096553008CD221 /* README.md */; };
 		65E905B126037F410063FF41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E905B026037F410063FF41 /* AppDelegate.swift */; };
 		65E905B326037F410063FF41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E905B226037F410063FF41 /* SceneDelegate.swift */; };
 		65E905B526037F410063FF41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E905B426037F410063FF41 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		6587E6C426091D6B008CD221 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6587E6C726096553008CD221 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		65E905AD26037F410063FF41 /* WhatAmIEating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatAmIEating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E905B026037F410063FF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65E905B226037F410063FF41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		65E905A426037F410063FF41 = {
 			isa = PBXGroup;
 			children = (
+				6587E6C726096553008CD221 /* README.md */,
 				65E905AF26037F410063FF41 /* WhatAmIEating */,
 				65E905AE26037F410063FF41 /* Products */,
 			);
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6587E6C826096553008CD221 /* README.md in Resources */,
 				65E905BD26037F430063FF41 /* LaunchScreen.storyboard in Resources */,
 				65E905BA26037F430063FF41 /* Assets.xcassets in Resources */,
 			);
