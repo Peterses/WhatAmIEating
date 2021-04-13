@@ -7,22 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
     
-    var mainView = MainView()
+    var coordinator: HomeCoordinator?
+    private var mainView = MainView()
     
     override func loadView() {
         super.loadView()
         view = mainView
     }
     
-    func setImagePickerController(){
-        print("pickercontroller")
+    private func setImagePickerController() {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+    }
+    
+    
+    private func analyzeImage() {
+        
+        let image = mainView.imageView.image
+        let analyzedText = ImageAnalyzer().recognizeText(image: image)
+        
+        print(analyzedText)
+        print(ImageAnalyzer().findESymbolsRegex(text: analyzedText))
     }
     
     init() {
@@ -40,13 +50,19 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: MainViewDelegate {
-    func didButtonClicked() {
+// MARK: - MainViewDelegate
+extension MainVC: MainViewDelegate {
+    func didChooseButtonClicked() {
         setImagePickerController()
+    }
+    
+    func didAnalyzeButtonClicked() {
+        analyzeImage()
     }
 }
 
-extension ViewController: UIImagePickerControllerDelegate {
+// MARK: - UIImagePickerControllerDelegate
+extension MainVC: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             setImagePickerController()
@@ -61,6 +77,7 @@ extension ViewController: UIImagePickerControllerDelegate {
     }
 }
 
-extension ViewController: UINavigationControllerDelegate {
+// MARK: - UINavigationControllerDelegate
+extension MainVC: UINavigationControllerDelegate {
     
 }
