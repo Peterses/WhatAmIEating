@@ -20,6 +20,8 @@
 		65D053A62623B71F0020F8D6 /* ENumbersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D053A52623B71F0020F8D6 /* ENumbersListVC.swift */; };
 		65E1797A262498F300598B51 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E17979262498F300598B51 /* HomeCoordinator.swift */; };
 		65E179812624994D00598B51 /* ENumbersListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E179802624994D00598B51 /* ENumbersListCoordinator.swift */; };
+		65E2BC7A2649D899004F54D3 /* AfterAnalyzeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E2BC792649D899004F54D3 /* AfterAnalyzeVC.swift */; };
+		65E2BC7C2649EBB8004F54D3 /* AdditivesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E2BC7B2649EBB8004F54D3 /* AdditivesTableViewCell.swift */; };
 		65E905B126037F410063FF41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E905B026037F410063FF41 /* AppDelegate.swift */; };
 		65E905B326037F410063FF41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E905B226037F410063FF41 /* SceneDelegate.swift */; };
 		65E905B526037F410063FF41 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E905B426037F410063FF41 /* MainVC.swift */; };
@@ -40,6 +42,8 @@
 		65D053A52623B71F0020F8D6 /* ENumbersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENumbersListVC.swift; sourceTree = "<group>"; };
 		65E17979262498F300598B51 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		65E179802624994D00598B51 /* ENumbersListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENumbersListCoordinator.swift; sourceTree = "<group>"; };
+		65E2BC792649D899004F54D3 /* AfterAnalyzeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterAnalyzeVC.swift; sourceTree = "<group>"; };
+		65E2BC7B2649EBB8004F54D3 /* AdditivesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditivesTableViewCell.swift; sourceTree = "<group>"; };
 		65E905AD26037F410063FF41 /* WhatAmIEating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatAmIEating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E905B026037F410063FF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65E905B226037F410063FF41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		65D053972623B2E90020F8D6 /* ApplicationControllers */ = {
 			isa = PBXGroup;
 			children = (
+				65E2BC782649D886004F54D3 /* AfterAnalyze */,
 				65D05393262380A70020F8D6 /* TabBarController.swift */,
 				65D0539F2623B6AE0020F8D6 /* ENumbersList */,
 				65D053982623B2F70020F8D6 /* Main */,
@@ -143,6 +148,15 @@
 				65D053A12623B7050020F8D6 /* ENumbersListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		65E2BC782649D886004F54D3 /* AfterAnalyze */ = {
+			isa = PBXGroup;
+			children = (
+				65E2BC792649D899004F54D3 /* AfterAnalyzeVC.swift */,
+				65E2BC7B2649EBB8004F54D3 /* AdditivesTableViewCell.swift */,
+			);
+			path = AfterAnalyze;
 			sourceTree = "<group>";
 		};
 		65E905A426037F410063FF41 = {
@@ -260,11 +274,13 @@
 				65D05394262380A70020F8D6 /* TabBarController.swift in Sources */,
 				65E1797A262498F300598B51 /* HomeCoordinator.swift in Sources */,
 				65D053A62623B71F0020F8D6 /* ENumbersListVC.swift in Sources */,
+				65E2BC7C2649EBB8004F54D3 /* AdditivesTableViewCell.swift in Sources */,
 				65E905B126037F410063FF41 /* AppDelegate.swift in Sources */,
 				65E179812624994D00598B51 /* ENumbersListCoordinator.swift in Sources */,
 				65FA2FB4261FDA91009F6C88 /* ImageAnalyzer.swift in Sources */,
 				65A32D43262371CB001E75E1 /* UIColor+App.swift in Sources */,
 				65E905B326037F410063FF41 /* SceneDelegate.swift in Sources */,
+				65E2BC7A2649D899004F54D3 /* AfterAnalyzeVC.swift in Sources */,
 				654B414D2623590000E0C44E /* Coordinator.swift in Sources */,
 				65A6F0EB26407E8900332F31 /* Additive.swift in Sources */,
 			);

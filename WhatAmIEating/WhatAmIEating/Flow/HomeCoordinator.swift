@@ -25,8 +25,11 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func showAfterAnalyzeVC() {
-//        let vc =
-    }
+//    func showAfterAnalyzeVC() {
+//    let vc = AfterAnalyzeVC(additives: [])
+//    vc.title = "Składniki E"
+//    navigationController.navigationBar.prefersLargeTitles = true
+//    navigationController.pushViewController(vc, animated: true)
+//    }
     
 }

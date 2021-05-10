@@ -61,16 +61,16 @@ class MainView: UIView {
         return stackView
     }()
     
-    //    private lazy var analyzeButton: UIButton = {
-    //        let button = UIButton()
-    //        button.translatesAutoresizingMaskIntoConstraints = false
-    //        button.setTitle("Analyze image", for: .normal)
-    //        button.backgroundColor = .white
-    //        button.setTitleColor(.systemGray, for: .normal)
-    //        button.layer.cornerRadius = 10
-    //        button.layer.borderWidth = 0.2
-    //        return button
-    //    }()
+    private lazy var analyzeButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Analyze image", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.systemGray, for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 0.2
+        return button
+    }()
     
     private lazy var infoLabel: UILabel = {
         let label = UILabel()
@@ -106,23 +106,20 @@ class MainView: UIView {
     
     private lazy var bottomView: UIView = {
         let view = UIView()
-//        view.backgroundColor = .yellow
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private func setBottomView() {
         NSLayoutConstraint.activate([
-//            bottomView.topAnchor.constraint(equalTo: buttonStackView.bottomAnchor, constant: 15),
             bottomView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             bottomView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
             bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
-//            bottomView.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
     
     private func setTextView() {
-
+        
         NSLayoutConstraint.activate([
             infoLabel.topAnchor.constraint(equalTo: bottomView.topAnchor),
             infoLabel.rightAnchor.constraint(equalTo: bottomView.rightAnchor),
@@ -134,6 +131,7 @@ class MainView: UIView {
     
     func setImage(image: UIImage) {
         imageView.image = image
+        imageView.contentMode = .scaleAspectFit
     }
     
     private func setChooseButton() {
@@ -141,14 +139,14 @@ class MainView: UIView {
     }
     
     private func setAnalyzeButton() {
-        //        analyzeButton.addTarget(self, action: #selector(analyzeImageButton), for: .touchUpInside)
+        analyzeButton.addTarget(self, action: #selector(analyzeImageButton), for: .touchUpInside)
     }
     
     private func setButton() {
-        //        NSLayoutConstraint.activate([
-        //            analyzeButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-        //            analyzeButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 100)
-        //        ])
+        NSLayoutConstraint.activate([
+            analyzeButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            analyzeButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 40)
+        ])
     }
     
     @objc private func selectPhotoButton() {
@@ -161,11 +159,10 @@ class MainView: UIView {
     
     private func addSubviews() {
         addSubview(imageView)
-        //        addSubview(analyzeButton)
         addSubview(bottomView)
         bottomView.addSubview(infoLabel)
+        bottomView.addSubview(analyzeButton)
         addSubview(buttonStackView)
-//        addSubview(infoLabel)
     }
     
     override init(frame: CGRect) {
